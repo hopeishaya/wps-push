@@ -1,0 +1,453 @@
+
+:root {
+	--mainText-color: rgb(29, 44, 60);
+	--inputText-color: rgb(100, 110, 122);
+	--inputBackground-color: rgba(237, 239, 242);
+	--freelancerText-color: rgb(255, 255, 255);
+	--mainBackground-color: rgb(245, 248, 250);
+	--freelancerBackground-color: rgb(17, 121, 191);
+	--circle-color: rgb(84, 139, 197);
+	--formHR-color: rgb(245, 247, 250);
+	--buttonBackground-color: rgb(3, 142, 125);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	* {
+		scroll-behavior: smooth;
+	}
+}
+
+*, *::before, ::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.4rem;
+	max-width: 144rem;
+	height: 117rem;
+	margin: auto;
+	background-color: var(--mainBackground-color);
+}
+
+
+/* NAVIGATION BAR */
+
+nav {
+	display: flex;
+	background-color: var(mainBackground-color);
+	margin-block: 3rem;
+	margin-inline: 0;
+	justify-content: space-between;
+}
+
+.logo {
+	background-color: var(mainBackground-color);
+	margin-block-start: 0;
+	margin-inline-start: 0;
+	max-width: 20rem;
+	height: 3.9rem;
+}
+
+ nav ul {
+ 	display: inline-flex;
+ 	list-style: none;
+ 	margin-inline-start: 83rem;
+ }
+
+nav li {
+	flex-grow: 1;
+	flex-shrink: 0;
+	margin: 0.2rem;
+	padding: 1rem;
+	text-align: center;
+	font-weight: 700;
+	color: var(--mainText-color);
+
+	&:hover {
+		border: 2px solid var(--inputText-color);
+		border-radius: 0.6rem;
+	}
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav .small-viewport-nav-menu {
+	display: none;
+	font-weight: 700;
+}
+
+.header-hr {
+	max-width: 100%;
+	height: 0.2rem;
+	color:rgba(224, 230, 234, 0.25);
+}
+
+
+/* MAIN CONTENT */
+
+main {
+	border-radius: 0.6rem;
+	box-shadow: box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
+	background: rgb(255, 255, 255);
+	max-width: 89.2rem;
+	height: 79.5rem;
+	margin-block-start: 8.5rem;
+	margin-inline: 27.4rem;
+	display: grid;
+	grid-template-columns: repeat(2, 2fr 1fr);
+	grid-template-areas: "checkout-info freelancer";
+}
+
+.checkout-info {
+	grid-area: checkout-info;
+	background-color: rgb(255, 255, 255);
+}
+
+.checkout-info h1 {
+	font-size: 3rem;
+	color: var(--mainText-color);
+	margin-inline-start: 4.8rem;
+	margin-block-start: 4.1rem;
+	margin-block-end: 4.1rem;
+	text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+fieldset {
+	border: none;
+}
+
+hr.form-hr {
+	color: var(--formHR-color);
+	border: 1px solid var(--formHR-color);
+	height: 0.2rem;
+	width: 58rem;
+}
+
+hr.form-hr:last-of-type {
+	margin-block-end: 3.9rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(255, 255, 255);
+/*	margin-inline-start: 4.9rem;*/
+}
+
+.legend-flex {
+	display: inline-flex;
+	margin-inline-start: 4.9rem;
+	margin-block-end: 1.5rem;
+}
+
+.small-circle {
+	width: 3rem;
+	height: 3rem;
+	color: var(--circle-color);
+	border: 0.275rem solid var(--circle-color);
+	border-radius: 50%;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: -0.142px;
+	stroke-width: 0.2rem;
+	margin-inline-end: 1rem;
+	margin-block-start: -0.475rem;
+}
+
+legend {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: var(--mainText-color);
+	letter-spacing: -0.16px;
+}
+
+.name-flex {
+	display: inline-flex;
+	margin-inline-start: 4.9rem;
+	justify-content: space-between;
+	column-gap: 3rem;
+}
+
+main span {
+	display: block;
+	margin-block: 0.7rem;
+}
+
+input {
+	height: 3.6rem;
+	font-size: 1.4rem;
+	color: var(--inputText-color);
+	background-color: var(--inputBackground-color);
+	border-radius: 0.4rem;
+	border: transparent;
+	padding-inline-start: 1.3rem;
+}
+
+#first-name, #last-name {
+	width: 22.6rem;
+}
+
+.email-add {
+	margin-inline-start: 4.9rem;
+	margin-block-start: 2rem;
+	margin-block-end: 4rem;
+}
+
+.email-add input {
+	width: 37rem;
+	border: transparent;
+}
+
+.payment-info {
+	margin-block-start: 3.1rem;
+}
+
+.credit-card-flex {
+	display: inline-flex;
+	margin-inline-start: 4.9rem;
+	margin-block-end: 4.1rem;
+}
+
+.cc-flex {
+	display: inline-flex;
+}
+
+#credit-card-number {
+	width: 27rem;
+	border-radius: 0;
+	border-end-start-radius: 0.4rem;
+	border-start-start-radius: 0.4rem;
+}
+
+input#card-expiration-date {
+	width: 15rem;
+	border-radius: 0;
+	text-align: right;
+}
+
+#card-cvc {
+	width: 5.75rem;
+	text-align: left;
+	border-radius: 0;
+	border-start-end-radius: 0.4rem;
+	border-end-end-radius: 0.4rem;
+}
+
+.cc2, .cc3 {
+	visibility: hidden;
+}
+
+button {
+	max-width: 48.3rem;
+	height: 5.2rem;
+	margin-inline-start: 4.9rem;
+	background-color: var(--buttonBackground-color);
+	border: var(--buttonBackground-color);
+	border-radius: 0.5rem;
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-align: ;
+	color: var(--freelancerText-color);
+}
+
+.checkout-footer {
+	margin-inline-start: 12.4rem;
+	margin-block-start: 2.4rem;
+	display: inline-flex;
+}
+
+.smaller-circle {
+	margin-inline-end: 0.85rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+}
+
+.checkout-footer p, .checkout-footer a {
+	color: var(--inputText-color);
+}
+
+#checkout-footer-strong {
+	color: var(--mainText-color);
+}
+
+#checkout-footer-logo {
+	background-position: center;
+	margin-inline-start: 24.6rem;
+	margin-block-start: 2.5rem;
+}
+
+footer .checkout-footer, 
+footer #checkout-footer-logo {
+	display: none;
+}
+
+
+/* MAIN CONTENT - FREELANCER SECTION */
+
+.freelancer {
+	grid-area: freelancer;
+	width: 31.2rem;
+	background-color: var(--freelancerBackground-color);
+	padding-inline-start: 4.4rem;
+	padding-block-start: 4.2rem;
+	font-size: 1.6rem;
+}
+
+.pricing h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	padding-inline-end: 0.6rem;
+	color: var(--freelancerText-color);
+}
+
+.pricing-h2-grid {
+	display: inline-grid;
+	width: 14rem;
+	margin-block-start: 0.5rem;
+	grid-template-areas: "h2 tall-text span";
+	grid-template-columns: repeat(3, 1fr 2fr 2fr);
+}
+
+.pricing-h2-grid div {
+	width: 12.5rem;
+}
+
+.pricing h2 {
+	grid-area: h2;
+	font-size: 2.4rem;
+	font-weight: 700;
+	align-self: start;
+	color: var(--freelancerText-color);
+	margin-inline-end: 0.85rem;
+	margin-block-start: 1.5rem;
+	letter-spacing: -0.015px;
+}
+
+.pricing #tall-text {
+	grid-area: tall-text;
+	font-size: 6rem;
+	font-weight: 300;
+	align-self: center;
+	letter-spacing: -0.015px;;
+	color: var(--freelancerText-color); 
+}
+
+.pricing span {
+	grid-area: span;
+	font-size: 1.8rem;
+	display: inline;
+	font-weight: 700;
+	align-self: end;
+	letter-spacing: -0.015px;;
+	color: var(--freelancerText-color); 
+}
+
+.pricing p {
+	width: 22.7rem;
+	font-size: 1.6rem;
+	font-style: italic;
+	line-height: 2.4rem;
+	color: var(--freelancerText-color);
+}
+
+.package-summary ul {
+	margin-block-end: 3.8rem;
+	list-style: none;
+	margin-block-start: 3.6rem;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: var(--freelancerText-color);
+}
+
+.package-summary ul img {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	margin-inline-end: 1.1rem;
+	margin-block-end: -0.5rem;
+}
+
+.package-summary li {
+	padding-block: 0.6rem;
+}
+
+.package-summary p, .package-summary a {
+	padding-block: 0.5rem;
+	font-size: 1.6rem;
+	color: var(--freelancerText-color);
+}
+
+.package-summary a {
+/*	text-decoration: underline rgba(185, 245, 255, 0.5036) 0.4rem;*/
+	text-decoration-skip-ink: none;
+	text-decoration-color: rgba(185, 245, 255, 0.5036);
+	text-decoration-line: underline;
+	text-decoration-thickness: 0.4rem;
+}
+
+.package-summary hr {
+	height: 0.2rem;
+	width: 22.4rem;
+	color: var(--freelancerText-color);
+	opacity: 0.2005;
+	margin-block-start: 4.1rem;
+}
+
+.customer-review {
+	margin-block-start: 4.3rem;
+}
+
+blockquote {
+	width: 22.9rem;
+	font-size: 1.8rem;
+	color: var(--freelancerText-color);
+	line-height: 2.4rem;
+	letter-spacing: -0.009px;
+}
+
+figure {
+	display: flex;
+	margin-block-start: 1.7rem;
+}
+
+figure img {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+}
+
+figcaption {
+	font-size: 1.6rem;
+	font-weight: 700;
+	letter-spacing: -0.009px;
+	margin-inline-start: 1rem;
+	padding-block: 1rem;
+	color: var(--freelancerText-color);
+}
+
+
+/* MAIN FOOTER */
+
+footer {
+	margin-block-start: 3.3rem;
+	text-align: center;
+	color: rgb(99, 107, 111);
+}
+
+footer a {
+	color: rgb(49, 112, 143);
+	text-decoration: none;
+}
+
+
