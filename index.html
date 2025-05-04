@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="a checkout page">
+	<title>Checkout Page</title>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="nav-bar">
+		<header class="logo">
+			<img src="media\wppusher-logo-copy.svg" width="200" height="39" alt="WP Pusher logo">
+		</header>
+		<ul>
+			<li><a href="">Download</a></li>
+			<li><a href="">Learn more</a></li>
+			<li><a href="">Pricing</a></li>
+			<li><a href="">Help</a></li>
+			<li><a href="">Account</a></li>
+
+		</ul>
+		<select class="small-viewport-nav-menu">
+			<option value="" id="menu-icon"><a href="#">Menu</a></option>
+			<option value="download"><a href="">Download</a></option>
+			<option value="learn-more"><a href="">Learn more</a></option>
+			<option value="pricing"><a href="">Pricing</a></option>
+			<option value="help"><a href="">Help</a></option>
+			<option value="account"><a href="">Account</a></option>
+		</select>
+	</nav>
+
+	<hr class="header-hr">
+	
+	<main>
+		<section class="checkout-info">
+			<header>
+				<h1>Checkout</h1>
+			</header>
+
+			<hr class="form-hr">
+
+			<form action="" method="post">
+
+				<fieldset class="basic-info">
+					<div class="legend-flex">
+						<div class="small-circle">1</div>
+						<legend>Your Basic Information</legend>
+					</div>
+
+					<div class="name-flex">
+						<label for="first-name"><span>First Name</span>
+							<input id="first-name" type="text" name="firstname" placeholder="Jane" required class="name">
+						</label>
+				
+						<label for="last-name"><span>Last Name</span>
+							<input id="last-name" type="text" name="lastname" placeholder="Doe" required class="name">
+						</label>
+					</div>
+
+					<div class="email-add">
+						<label for="email-address"><span>E-mail</span>
+							<input id="email-address" type="email" name="email" inputmode="email" placeholder="janedoe@example.com" required>
+						</label>
+					</div>
+				</fieldset>
+
+				<hr class="form-hr">
+
+				<fieldset class="payment-info">
+					<div class="legend-flex">
+						<div class="small-circle">2</div>
+						<legend>Your Payment Information</legend>
+					</div>
+					<div class="credit-card-flex">
+						<label for="credit-card-number"><span class="cc1">Credit Card</span>
+							<input id="credit-card-number" type="tel" name="credit-card" inputmode="numeric" pattern="[0-9\s]{13,19}" minlength="15" maxlength="19" placeholder="Card number" required>
+						</label>
+
+						<div class="cc-flex">
+							<label for="card-expiration-date" class="cc"><span class="cc2">MM/YY</span>
+								<input id="card-expiration-date" type="month" name="card-mm-yy" min="2023-12" value="2023-12" required>
+							</label>
+
+							<label for="card-cvc" class="cc"><span class="cc3">CVC</span>
+								<input id="card-cvc" type="tel" name="cvc" maxlength="4" inputmode="numeric" pattern="[0-9\s]{3}" placeholder="CVC" required>
+							</label>
+						</div>
+					</div>
+				</fieldset>
+
+				<hr class="form-hr">
+
+				<button id="submit-button" type="submit">Buy WP Pusher</button>
+			</form>
+
+			<div class="checkout-footer">
+				<div class="smaller-circle">
+					<img src="media\Mask.svg"width="20" height="20" alt="a question mark symbol">
+				</div>
+				<p><strong id="checkout-footer-strong">Need any help?</strong> Don't hesitate to <a href="">contact support!</a></p>
+			</div>
+			<div id="checkout-footer-logo">
+				<img src="media\powered-by-stripe.svg" width="92" height="20.101" alt="Powered by Stripe logo">
+			</div>
+		</section>
+
+		<section class="freelancer">
+			<header class="pricing">
+				<h1>Freelancer</h1>
+				<div class="pricing-h2-grid">
+					<h2>$</h2>
+					<div>
+						<span id="tall-text">99</span>
+						<span>/ year</span>
+					</div>
+				</div>
+				
+				<p>Automatically renews after 1 year</p>
+			</header>
+
+			<article class="package-summary">
+				<ul>
+					<li><img src="media\Combined-Shape.svg" alt="a checkmark in a circle"> Use on <strong>5</strong> client sites</li>
+					<li><img src="media\Combined-Shape.svg" alt="a checkmark in a circle"> Private repositories</li>
+					<li><img src="media\Combined-Shape.svg" alt="a checkmark in a circle"> Email support</li>
+				</ul>
+				<p>Need <strong>20</strong> client sites?</p>
+				<p><a href=""><strong>Switch to the <em>Agency</em> plan.</strong></a></p>
+				<hr>
+				<div class="customer-review">
+					<blockquote><em>FTP is horrible to deal with. <strong>WP Pusher</strong> solves that issue, and the customer suppport is awesome!</em></blockquote>
+					<figure>
+						<img src="media\Bitmap.svg" alt="a picture of a customer">
+						<figcaption>Kirk Beard</figcaption>
+					</figure>
+				</div>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<div class="checkout-footer">
+			<p><img src="media\Mask.svg" width="20" height="20" alt="a question mark symbol" class="smaller-circle">
+				<strong id="checkout-footer-strong"> Need any help?</strong> Don't hesitate to <a href="">contact support!</a>
+			</p>
+		</div>
+		<div id="checkout-footer-logo">
+			<img src="media\powered-by-stripe.svg" width="92" height="20.101" alt="Powered by Stripe logo">
+		</div>
+		<p>&copy;  2018 WP Pusher IVS &middot; <a href="">Terms of Service</a></p>
+	</footer>
+
+	
+</body>
+</html>
